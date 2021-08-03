@@ -1,16 +1,20 @@
-<mat-toolbar style="background-color: white;">
-  <div class="d-flex justify-content-between">
-    <div >
+<mat-toolbar style="background-color: white;" >
+  <div class="row w-100 d-flex justify-content-between">
+    <div class="col-4">
       <button mat-button>About</button>
       <button mat-button>help</button>
     </div>
-    <div >
-      <input placeholder="Search on twitter" type="text">
-      <!-- <span matSuffix><mat-icon>search</mat-icon></span> -->
+    <div class="col-4">
+
+      <input  placeholder="Search on twitter" type="text">
+
+
     </div>
-    <div >
-      <span>Hey, john!</span>
-      <img mat-card-avatar src="../../assets/images/portrait.jpg" >
+
+    <div class="col-4 d-flex justify-content-end">
+      <span class="mt-2 mx-2">Hey, john!</span>
+      <img  mat-card-avatar src="../../assets/images/portrait.jpg" >
     </div>
   </div>
+
 </mat-toolbar>
