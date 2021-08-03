@@ -1,1 +1,25 @@
+
+@import '~@angular/material/theming';
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+
 /* You can add global styles to this file, and also import other style files */
+
+@include mat-core();
+$satelar-website-primary: mat-palette($mat-light-blue, 300);
+$satelar-website-accent: mat-palette($mat-teal, 700, A100, A400);
+$satelar-website-warn: mat-palette($mat-red);
+$satelar-website-theme: mat-light-theme((
+  color: (
+    primary: $satelar-website-primary,
+    accent: $satelar-website-accent,
+    warn: $satelar-website-warn,
+  )
+));
+
+@include angular-material-theme($satelar-website-theme);
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -3,14 +3,36 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { MainComponent } from './main/main.component';
+import { FirstColComponent } from './main/first-col/first-col.component';
+import { SecondColComponent } from './main/second-col/second-col.component';
+import { ThirdColComponent } from './main/third-col/third-col.component';
+import { RetweetComponent } from './main/second-col/retweet/retweet.component';
+import { TrendsComponent } from './main/third-col/trends/trends.component';
+import { ShouldFollowComponent } from './main/third-col/should-follow/should-follow.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ToolbarComponent,
+    SidebarComponent,
+    MainComponent,
+    FirstColComponent,
+    SecondColComponent,
+    ThirdColComponent,
+    RetweetComponent,
+    TrendsComponent,
+    ShouldFollowComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
