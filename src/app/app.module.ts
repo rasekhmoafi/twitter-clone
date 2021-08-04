@@ -14,6 +14,9 @@ import { ThirdColComponent } from './main/third-col/third-col.component';
 import { RetweetComponent } from './main/second-col/retweet/retweet.component';
 import { TrendsComponent } from './main/third-col/trends/trends.component';
 import { ShouldFollowComponent } from './main/third-col/should-follow/should-follow.component';
+import { AngularFireMessaging, AngularFireMessagingModule } from '@angular/fire/messaging';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,9 @@ import { ShouldFollowComponent } from './main/third-col/should-follow/should-fol
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireMessagingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
