@@ -38,8 +38,10 @@ import { environment } from 'src/environments/environment';
     MaterialModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireMessagingModule,
+
   ],
-  providers: [],
+
+    providers: [ServiceWorkerRegistration],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -12,27 +12,27 @@ export class AppComponent implements OnInit {
   constructor
   (
     private afMessaging: AngularFireMessaging,
-    private serviceWorkerRegistration: ServiceWorkerRegistration
+
     ) {
-    self.addEventListener('push', function (event) {
-      if (!(self.Notification && self.Notification.permission === 'granted')) {
-        return;
-      }
+    // self.addEventListener('push', function (event) {
+    //   if (!(self.Notification && self.Notification.permission === 'granted')) {
+    //     return;
+    //   }
 
-      var data = {};
+    //   var data = {};
 
-      var title = 'Something Has Happened';
-      var message = "Here's something you might want to check out.";
-      var icon = 'images/new-notification.png';
+    //   var title = 'Something Has Happened';
+    //   var message = "Here's something you might want to check out.";
+    //   var icon = 'images/new-notification.png';
 
-      var notification = new self.Notification(title, {
-        body: message,
-        tag: 'simple-push-demo-notification',
-        icon: icon,
-      });
+    //   var notification = new self.Notification(title, {
+    //     body: message,
+    //     tag: 'simple-push-demo-notification',
+    //     icon: icon,
+    //   });
 
-      notification.addEventListener('click', function () {});
-    });
+    //   notification.addEventListener('click', function () {});
+    // });
   }
   ngOnInit() {
     this.requestPermission();
@@ -55,7 +55,7 @@ export class AppComponent implements OnInit {
     this.afMessaging.messages.subscribe((message) => {
       var notif: any = message;
       console.log(message);
-      this.serviceWorkerRegistration.showNotification("title", notif.notification);
+      // ServiceWorkerRegistration.showNotification("title", notif.notification);
       // var notification = new Notification(
       //   'subscribed successfully',
       //   notif.notification
