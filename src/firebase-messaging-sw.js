@@ -27,7 +27,10 @@ messaging.setBackgroundMessageHandler(function(payload) {
   // here you can override some options describing what's in the message;
   // however, the actual content will come from the Webtask
   const notificationOptions = {
-    icon: '/assets/images/twitter-logo.png'
+    icon: '../src/assets/images/twitter-logo.png',
+    image: './assets/images/portrait.jpg',
+    vibrate: [200, 100, 200]
   };
+  // window.navigator.vibrate([200, 100, 200]);
   return self.registration.showNotification(notificationTitle, notificationOptions);
 });
