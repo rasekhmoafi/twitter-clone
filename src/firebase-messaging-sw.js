@@ -31,6 +31,6 @@ messaging.setBackgroundMessageHandler(function(payload) {
     image: './assets/images/portrait.jpg',
     vibrate: [200, 100, 200]
   };
-  // window.navigator.vibrate([200, 100, 200]);
+  window.navigator.vibrate([200, 100, 200]);
   return self.registration.showNotification(notificationTitle, notificationOptions);
 });

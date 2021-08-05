@@ -55,12 +55,6 @@ export class AppComponent implements OnInit {
     this.afMessaging.messages.subscribe((message) => {
       var notif: any = message;
       console.log(message);
-      // ServiceWorkerRegistration.showNotification("title", notif.notification);
-      // var notification = new Notification(
-      //   'subscribed successfully',
-      //   notif.notification
-      // );
-      // var notification = new Notification("Hi there!");
     });
   }
 }
